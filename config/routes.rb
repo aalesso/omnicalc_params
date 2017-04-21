@@ -8,5 +8,7 @@ get("/square/results",{:controller => "calculations", :action => "square_results
 get("/square_root/new",{:controller => "calculations", :action => "square_root_form"})
 get("/square_root/results",{:controller => "calculations", :action => "square_root_results"})
 
+get("/flexible/payment/new",{:controller => "calculations", :action => "payment_form"})
+get("/flexible/payment/results",{:controller => "calculations", :action => "payment_form_results"})
 
 end
