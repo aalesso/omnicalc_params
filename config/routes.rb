@@ -18,8 +18,6 @@ get("/square_root/new",{:controller => "calculations", :action => "square_root_f
 get("/square_root/results",{:controller => "calculations", :action => "square_root_results"})
 
 get("/payment/new",{:controller => "calculations", :action => "payment_form"})
-get("/flexible/payment/results",{:controller => "calculations", :action => "payment_form_results"})
-
-
+get("/payment/results",{:controller => "calculations", :action => "payment_form_results"})
 
 end
