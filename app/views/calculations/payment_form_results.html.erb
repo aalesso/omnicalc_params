@@ -4,10 +4,10 @@
     Number
   </h3>
   <p>
-    <%= @present_value %> = present value
+    $ <%= @present_value %> = Principal
   </p>
   <p>
-    <%= @basis_points %> basis points
+    <%= @apr %>% APR
   </p>
   <p>
     <%= @number_of_years %> years
@@ -16,7 +16,7 @@
     Payment
   </h3>
   <p>
-    <%= @payment%>
+    $ <%= @payment %>
   </p>
 </div>
 <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>

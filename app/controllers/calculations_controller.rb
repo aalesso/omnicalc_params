@@ -64,10 +64,10 @@ class CalculationsController < ApplicationController
 
   def payment_form_results
     @present_value = params[:present_value].to_f
-    @basis_points = params[:basis_points].to_f
     @number_of_years = params[:number_of_years].to_f
     @months = @number_of_years.to_f*12
-    @apr = @basis_points*0.0001/12
+    @apr0 = params[:apr].to_f
+    @apr = @apr0*0.01/12
     @payment0 = (@present_value*@apr)/(1-(1+@apr)**(-@months))
     @payment = @payment0.round(2)
     render("calculations/payment_form_results.html.erb")
