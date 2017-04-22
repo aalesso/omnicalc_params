@@ -16,6 +16,13 @@ class CalculationsController < ApplicationController
     render("calculations/flex_square_root_8.html.erb")
   end
 
+  def min_max
+    @min = params["min"].to_f
+    @max = params["max"].to_f
+    @rand_between =  @min + (@max-@min)*rand()
+    render("calculations/min_max.html.erb")
+  end
+
   def payment_flex
     @present_value = params["present_value"].to_f
     @basis_points = params["basis_points"].to_f
@@ -41,10 +48,11 @@ class CalculationsController < ApplicationController
 
 
   def payment_form
-    # @present_value = params[:present_value].to_f
-    # @basis_points = params[:basis_points].to_f
-    # @number_of_years = params[:number_of_years].to_f
-    # @payment = (@present_value*@basis_points)/(1-(1+@basis_points)**(-@number_of_years))
+    @present_value = params[:present_value].to_f
+    @basis_points = params[:basis_points].to_f
+    @number_of_years = params[:number_of_years].to_f
+    @payment_flex0 = (@present_value*@basis_points*0.0001)/(1-(1+@basis_points*0.0001)**(-@number_of_years))/12.round
+    @payment_flex = @payment_flex0.round(2)
     render("calculations/payment_form.html.erb")
   end
 
