@@ -71,6 +71,7 @@ class CalculationsController < ApplicationController
     @payment0 = (@present_value*@apr)/(1-(1+@apr)**(-@months))
     @payment = @payment0.round(2)
     render("calculations/payment_form_results.html.erb")
+
   end
 
 end
