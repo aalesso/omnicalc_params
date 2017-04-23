@@ -7,11 +7,14 @@ class CalculationsController < ApplicationController
   def flex_square_5
     @user_number = params["num"].to_f
     @square = @user_number ** 2
-
-
     render("calculations/flex_square_5.html.erb")
   end
 
+  def flex_square_root
+    @user_number0 = params["num"].to_f
+    @square_root = @user_number0 ** 0.5
+    render("calculations/flex_square_root.html.erb")
+  end
 
   def square_results
     @user_number2 = params[:user_number].to_f
