@@ -1,13 +1,17 @@
-<h1> Square Root Calculation </h1>
+<h1> Payment amount Calculation</h1>
 
-<form action="/flexible/payment/results">
+<form action="/payment/results">
   <div>
-    <label></label>
-      <input type="text" name="present_value" placeholder="Present Value">
-      <label></label>
-        <input type="text" name="basis_points" placeholder="Basis Points">
-        <label></label>
-          <input type="text" name="number_of_years" placeholder="# of years">
-        </div>
-        <button> Get Payment Amount</button>
-      </form>
+    <label for="present_value">
+      <input type="text" id="present_value" name="present_value" placeholder="Pincipal">
+    </label>
+    <label for="apr">
+      <input type="text" name="apr" id="apr" placeholder="APR">
+    </label>
+    <label for="number_of_years">
+      <input type="text" name="number_of_years" id="number_of_years" placeholder="Number of years">
+    </label>
+  </div>
+  <button> Get Payment Amount</button>
+</form>
+<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
