@@ -5,15 +5,15 @@ class CalculationsController < ApplicationController
     @user_number = params["num"].to_f
     @square = @user_number ** 2
     render("calculations/flex_square_5.html.erb")
-<<<<<<< HEAD
+    # <<<<<<< HEAD
   end
 
   def flex_square_root
     @user_number0 = params["num"].to_f
     @square_root = @user_number0 ** 0.5
     render("calculations/flex_square_root.html.erb")
-=======
   end
+  # =======
 
   def flex_square_root_8
     @user_number4 = params["num"].to_f
@@ -28,7 +28,7 @@ class CalculationsController < ApplicationController
     @max = params["max"].to_f
     @rand_between =  @min + (@max-@min)*rand()
     render("calculations/min_max.html.erb")
->>>>>>> origin/master
+    # >>>>>>> origin/master
   end
 
   def payment_flex
@@ -82,5 +82,10 @@ class CalculationsController < ApplicationController
     render("calculations/payment_form_results.html.erb")
 
   end
-
+  def number_to_currency(number, options = {})
+    delegate_number_helper_method(:number_to_currency, number, options)
+  end
+  def number_to_percentage(number, options = {})
+    delegate_number_helper_method(:number_to_percentage, number, options)
+  end
 end
