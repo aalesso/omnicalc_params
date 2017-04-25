@@ -46,6 +46,7 @@ class CalculationsController < ApplicationController
   def square_form
     render("calculations/square_form.html.erb")
   end
+
   def square_results
     @user_number2 = params[:user_number].to_f
     @square_results = @user_number2 **2
@@ -62,14 +63,14 @@ class CalculationsController < ApplicationController
 
 
 
-  # def payment_form
+  def payment_form
     # @present_value = params[:present_value].to_f
     # @basis_points = params[:basis_points].to_f
     # @number_of_years = params[:number_of_years].to_f
     # @payment_flex0 = (@present_value*@basis_points*0.0001)/(1-(1+@basis_points*0.0001)**(-@number_of_years))/12.round
     # @payment_flex = @payment_flex0.round(2)
     # render("calculations/payment_form.html.erb")
-    # end
+  end
 
   def payment_form_results
     @present_value = params[:present_value].to_f
