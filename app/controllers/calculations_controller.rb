@@ -56,20 +56,20 @@ class CalculationsController < ApplicationController
   def square_root_results
     @user_number3 = params[:user_number].to_f
     @square_root_results0 = @user_number3 **0.5
-    @square_root_results = @square_root_results0.round(2)
+    @square_root_results = @square_root_results0.round(3)
     render("calculations/square_root_results.html.erb")
   end
 
 
 
-  def payment_form
+  # def payment_form
     # @present_value = params[:present_value].to_f
     # @basis_points = params[:basis_points].to_f
     # @number_of_years = params[:number_of_years].to_f
     # @payment_flex0 = (@present_value*@basis_points*0.0001)/(1-(1+@basis_points*0.0001)**(-@number_of_years))/12.round
     # @payment_flex = @payment_flex0.round(2)
-    render("calculations/payment_form.html.erb")
-  end
+    # render("calculations/payment_form.html.erb")
+    # end
 
   def payment_form_results
     @present_value = params[:present_value].to_f
@@ -87,5 +87,16 @@ class CalculationsController < ApplicationController
   end
   def number_to_percentage(number, options = {})
     delegate_number_helper_method(:number_to_percentage, number, options)
+  end
+
+  def random_form
+    render("calculations/random_form.html.erb")
+  end
+
+  def random_results
+    @min=params[:min].to_f
+    @max=params[:max].to_f
+    @rand_between =  @min + (@max-@min)*rand()
+    render("calculations/random_results.html.erb")
   end
 end

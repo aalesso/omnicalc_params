@@ -26,6 +26,6 @@ get("/payment/new",{:controller => "calculations", :action => "payment_form"})
 get("/payment/results",{:controller => "calculations", :action => "payment_form_results"})
 
 get("/random/new",{:controller => "calculations", :action => "random_form"})
-get("/random/results",{:controller => "calculations", :action => "randomresults"})
+get("/random/results",{:controller => "calculations", :action => "random_results"})
 
 end

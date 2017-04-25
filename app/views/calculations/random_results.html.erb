@@ -1,0 +1,20 @@
+<h1>Payment amount Calculation</h1>
+<div>
+  <h3>
+    Min
+  </h3>
+  <p>
+    $ <%= @min %> = min
+  </p>
+  <p>
+    <%= @max %> = max
+  </p>
+  <p>
+    <%= @rand_between %> random number between min and max
+  </p>
+
+  <form action="/random/results">
+    <button type="submit" >Pick random number</button>
+  </form>
+</div>
+<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
