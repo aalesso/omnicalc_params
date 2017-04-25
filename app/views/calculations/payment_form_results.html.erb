@@ -7,7 +7,7 @@
     $ <%= @present_value %> = Principal
   </p>
   <p>
-    <%= @apr %>% APR
+    <%= number_to_percentage(@apr, precision:4) %>% APR
   </p>
   <p>
     <%= @number_of_years %> years
